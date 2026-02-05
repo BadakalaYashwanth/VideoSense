@@ -96,7 +96,7 @@ const Dashboard = () => {
                         controls
                         autoPlay
                         className="video-player"
-                        src={`http://127.0.0.1:5000/api/videos/stream/${activeVideo._id}`}
+                        src={`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000'}/api/videos/stream/${activeVideo._id}`}
                     />
                     <button className="btn" style={{ marginTop: '1rem' }} onClick={() => setActiveVideo(null)}>
                         Close Player
