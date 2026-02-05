@@ -1,7 +1,8 @@
 [build]
-  base = "frontend"
-  command = "npm install && npm run build"
-  publish = "dist"
+  # Using repo root as base context to avoid path resolution errors
+  base = "" 
+  command = "cd frontend && npm install && npm run build"
+  publish = "frontend/dist"
 
 [[redirects]]
   from = "/*"
